@@ -105,123 +105,182 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+
+![image](https://github.com/user-attachments/assets/5635425c-15b5-4303-ba61-b0453e393ffe)
 
 ```sql
--- Paste your SQL code below for Question 1
+INSERT INTO Student_details(RollNo,Name,Gender,Subject,MARKS)
+VALUES(202,"Ella King","F","Chemistry",87),
+(203,"James Bond","M","Literature",78);
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/e1b43ff5-667c-47de-87dc-1a146f37d76a)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/ffdad72e-a8c2-4b4e-a2d4-c7493d7c00e0)
+
+
 
 ```sql
--- Paste your SQL code below for Question 2
+INSERT INTO Products(ProductID,Name,Category,Price,Stock)
+VALUES(104,"Tablet","Electronics",100,50);
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/3713a8cd-2aa8-4d2f-be8e-6a8716bf86fa)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/7666ca39-ef27-406c-9455-c561ee5ba229)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+select * from Out_of_print_books
+UNION ALL
+select * from  Books
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/d48d54b4-96f9-419d-9e19-44440f86efce)
 
-![Output3](output.png)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/ad555761-0a74-4556-827f-c1f143b3f79c)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+CREATE TABLE Events(
+EventID INTEGER,
+EventName TEXT,
+EventDate DATE);
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/e28b01b0-7bef-4fa1-b5de-8919519145f7)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/f06d17f9-827a-4cee-8946-b8412be9424f)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+CREATE TABLE ProjectAssignments(
+AssignmentID INTEGER PRIMARY KEY,
+EmployeeID INTEGER,
+ProjectID INTEGER,
+AssignmentDate DATE NOT NULL,
+FOREIGN KEY(EmployeeID) references Employees(EmployeeID),
+FOREIGN KEY(ProjectID) references Projects(ProjectID)
+);
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/cc79001a-63eb-458a-965f-fef3250c196f)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/dfeae7c3-27a0-4faf-a1a6-0fb9cc001fdf)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+CREATE TABLE Orders(
+OrderID  INTEGER PRIMARY KEY,
+OrderDate  DATE NOT NULL,
+CustomerID  INTEGER,
+FOREIGN KEY(CustomerID) references Customers(CustomerID)
+);
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/52d0bf29-b381-499f-a51b-150f2e9367dc)
 
-![Output6](output.png)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/3232579f-5ada-4456-bfbb-6eb3cc89001a)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+CREATE TABLE contacts(
+contact_id  INTEGER PRIMARY KEY,
+first_name TEXT NOT NULL,
+last_name TEXT NOT NULL,
+email TEXT,
+phone TEXT NOT NULL check(length(phone)=10)
+
+);
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/193002df-4beb-4983-aa22-cc95fdcf27d3)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/a555e095-a034-45b8-b220-0bbf533fe664)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+ALTER TABLE Student_details
+ADD COLUMN "Mobilenumber" number;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/67adef89-c773-4883-a2db-c46c06d3f42d)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/5655e690-4e40-4d75-b9ae-02a0b1f8bfe5)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+ALTER TABLE Companies
+RENAME name to first_name;
+
+ALTER TABLE Companies
+ADD COLUMN "mobilenumber" number;
+
+
+ALTER TABLE Companies
+ADD COLUMN "DOB" Date;
+
+ALTER TABLE Companies
+ADD COLUMN "State" varchar(30);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/b3659a28-312c-4dc1-b4a6-96fb97e31b93)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/c222da16-d080-4897-8d0d-d4f48037241d)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+ALTER TABLE Student_details
+ADD COLUMN "Country" TEXT;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/ee0bef0a-26b9-482f-9db2-692012253932)
+
 
 
 ## RESULT
