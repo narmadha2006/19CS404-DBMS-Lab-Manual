@@ -38,123 +38,165 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/6e5979e3-30c9-4ec1-ac6f-869e595389f4)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT DoctorID, COUNT(*) AS TotalAppointments
+FROM Appointments
+GROUP BY DOCTORID
+;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/01d477ce-3cb1-40f5-b807-933bf6b7503d)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/4c51c24e-8917-4a80-941a-2704b79de6dd)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT SUBSTR(EMAIL, INSTR(EMAIL, '@') +1) AS EmailDomain, COUNT(*) AS 'TotalPatients'
+FROM Patients
+GROUP BY SUBSTR(EMAIL, INSTR(EMAIL, '@')+1)
+;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/66cf7596-70c9-42ba-82f5-3c7e8cb86b65)
 
-![Output2](output.png)
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/2e3ffc01-a285-4d31-9d4f-ea7ba65405d8)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT PatientID, COUNT(*) AS  TotalRecords
+FROM MedicalRecords 
+GROUP BY PatientID
+;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/fa31f47b-33a5-44fa-b6a7-ba8d739073e9)
 
-![Output3](output.png)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/31ae2871-9e62-40e2-86ff-85b46bce1669)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT SUM(WORKHOUR) AS 'Total working hours'
+FROM employee1;
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/bc0c1cb9-fd1a-4079-b93f-df413b8c1af2)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/e642f855-4dd0-49c1-b8e3-aea482c591de)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT AVG(LENGTH(email)) AS avg_email_length_below_30
+FROM  customer
+WHERE city = 'Mumbai'
+;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/35dd3590-cce1-4a65-acb6-5d8eeb266f8a)
 
-![Output5](output.png)
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/dc668b8b-0f5c-4c5d-af13-68dea43d14d9)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT MAX(price) - MIN(price) AS price_diff
+FROM fruits
+;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/023dd4c4-9bd3-4650-bcb5-2de2bd883093)
 
-![Output6](output.png)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/97d127bd-8afa-4b9e-b394-a11e34703c7f)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT COUNT(DISTINCT Salesman_id) AS COUNT
+FROM orders
+;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/d6a5f287-fb05-4cf5-bfa8-5a66c0677809)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/0f0273bb-fd73-4eb5-aab0-9cb4311f8f0e)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT jdate, SUM(workhour) AS 'SUM(workhour)'
+FROM employee1
+GROUP BY jdate
+HAVING SUM(workhour) > 40
+;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/2dfa2ee9-ff93-4d0a-9a8d-ca0562d6f527)
 
-![Output8](output.png)
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/26d55d16-35b5-4a4d-ac7e-e338c1d5fe9a)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT age,max(income) as  'MAX(income)'
+from employee
+group by age
+having max(income)>2000000
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/9a38ea4a-f086-4a54-8d1a-fac2c8c7a6ab)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/44677c6a-8640-40d4-b480-58b7d4fb12f2)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT category_id, COUNT(*) AS 'count(product_name)'
+FROM products
+GROUP BY category_id
+HAVING category_id < 3
+;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/5f8eb786-7c2b-42a9-8f2c-68c96a7cf0af)
 
-![Output10](output.png)
 
 
 ## RESULT
